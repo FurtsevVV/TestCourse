@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:n0="http://www.oracle.com/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <changeSet id="003" author="zakat">
+        <createTable tableName="rating">
+            <column name="id" type="int">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="rating_value" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rating_date" type="datetime">
+                <constraints nullable="false"/>
+            </column>
+            <column name="agency_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="agency_id"
+                                 baseTableName="rating"
+                                 constraintName="rating_rating_agency_fk"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rating_agency"/>
+    </changeSet>
+</databaseChangeLog>
