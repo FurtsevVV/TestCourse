@@ -10,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/organization")
 public class OrganizationController {
 
+    //* Комментарий
+
+
+
+
     @GetMapping("/{id}")
     public OrganizationDto getOrganizationById(@PathVariable Long id) {
         return null;
