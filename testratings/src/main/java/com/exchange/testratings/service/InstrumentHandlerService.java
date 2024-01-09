@@ -19,11 +19,6 @@ public class InstrumentHandlerService {
         dto.setInstrumentType(instrument.getInstrumentType().getName());
         dto.setCompliance(instrument.isCompliance());
         dto.setIsin(instrument.getIsin());
-        dto.setAgencyName();
-
-
-
-
 
         return instrument;
 
