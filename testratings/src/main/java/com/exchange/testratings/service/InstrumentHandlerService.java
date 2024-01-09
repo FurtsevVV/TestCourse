@@ -15,8 +15,17 @@ public class InstrumentHandlerService {
 
         Instrument instrument = instrumentService.getById(id).orElse(new Instrument());
 
+        InstrumentDto dto = new InstrumentDto();
+        dto.setInstrumentType(instrument.getInstrumentType().getName());
+        dto.setCompliance(instrument.isCompliance());
+        dto.setIsin(instrument.getIsin());
+        dto.setAgencyName();
 
-        return null;
+
+
+
+
+        return instrument;
 
     }
 }

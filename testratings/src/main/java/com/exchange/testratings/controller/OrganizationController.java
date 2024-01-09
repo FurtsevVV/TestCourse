@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/organization")
 public class OrganizationController {
 
-    //* Комментарий
-
-
 
 
     @GetMapping("/{id}")
